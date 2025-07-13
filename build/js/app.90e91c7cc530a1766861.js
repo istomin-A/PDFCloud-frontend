@@ -1197,7 +1197,7 @@ class AdminLogin {
     }
 
     postData(userData) {
-        fetch('http://localhost:3000/api/adminLogin', {
+        fetch('https://pdfcloud-server.onrender.com/api/adminLogin', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userData)
@@ -1378,7 +1378,7 @@ class AdminPanel {
             const inputSearch = this.formAdminSearch.querySelector('[data-js-input-search]')
             const searchOut = this.formAdminSearch.querySelector('[data-js-admin-search-out]')
 
-            fetch(`http://localhost:3000/api/users/search?login=${encodeURIComponent(inputSearch.value)}`)
+            fetch(`https://pdfcloud-server.onrender.com/api/users/search?login=${encodeURIComponent(inputSearch.value)}`)
                 .then(res => {
                     if (!res.ok) throw new Error('Ошибка поиска');
                     return res.json();
@@ -1637,7 +1637,7 @@ class SignIn {
     // }
 
     postData(userData) {
-        fetch('http://localhost:3000/api/login', {
+        fetch('https://pdfcloud-server.onrender.com/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userData)
@@ -1713,7 +1713,7 @@ class SignUp {
     }
 
     postData(userData) {
-        fetch('http://localhost:3000/api/users', {
+        fetch('https://pdfcloud-server.onrender.com/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -1934,7 +1934,7 @@ class User {
     }
 
     displayPDF() {
-        fetch(`http://localhost:3000/api/documents`)
+        fetch(`https://pdfcloud-server.onrender.com/api/documents`)
             .then(res => {
                 if (!res.ok) throw new Error('Ошибка при загрузке PDF');
                 return res.json();
@@ -2221,4 +2221,4 @@ new _modules_Spoller_js__WEBPACK_IMPORTED_MODULE_9__["default"]()
 
 /******/ })()
 ;
-//# sourceMappingURL=app.ea3f3e17efe6a43bc6f5.js.map
+//# sourceMappingURL=app.90e91c7cc530a1766861.js.map
