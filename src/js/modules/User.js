@@ -40,7 +40,7 @@ class User {
     }
 
     displayPDF() {
-        fetch(`http://localhost:3000/api/documents`)
+        fetch(`https://pdfcloud-server.onrender.com/api/documents`)
             .then(res => {
                 if (!res.ok) throw new Error('Ошибка при загрузке PDF');
                 return res.json();

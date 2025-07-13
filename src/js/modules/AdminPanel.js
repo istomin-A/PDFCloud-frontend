@@ -125,7 +125,7 @@ class AdminPanel {
             const inputSearch = this.formAdminSearch.querySelector('[data-js-input-search]')
             const searchOut = this.formAdminSearch.querySelector('[data-js-admin-search-out]')
 
-            fetch(`http://localhost:3000/api/users/search?login=${encodeURIComponent(inputSearch.value)}`)
+            fetch(`https://pdfcloud-server.onrender.com/api/users/search?login=${encodeURIComponent(inputSearch.value)}`)
                 .then(res => {
                     if (!res.ok) throw new Error('Ошибка поиска');
                     return res.json();

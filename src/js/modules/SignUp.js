@@ -18,7 +18,7 @@ class SignUp {
     }
 
     postData(userData) {
-        fetch('http://localhost:3000/api/users', {
+        fetch('https://pdfcloud-server.onrender.com/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
