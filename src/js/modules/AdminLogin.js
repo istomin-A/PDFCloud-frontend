@@ -28,7 +28,7 @@ class AdminLogin {
             if (data.success) {
                 alert('Вход выполнен успешно!')
                 localStorage.setItem('isAdmin', 'true')
-                window.location.href = '/admin.html'
+                window.location.href = '/PDFCloud-frontend/build/admin.html'
             } else {
                 alert('Ошибка: ' + data.message)
             }

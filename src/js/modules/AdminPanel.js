@@ -12,7 +12,7 @@ class AdminPanel {
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
         if (!this.rootElement) return
-        if (localStorage.getItem('isAdmin') !== 'true') window.location.href = '/adminLogin.html'
+        if (localStorage.getItem('isAdmin') !== 'true') window.location.href = '/PDFCloud-frontend/build/adminLogin.html'
         this.buttonLogOut = document.querySelector(this.selectors.logOut)
         this.logOut()
         this.formUploadingPDF = this.rootElement.querySelector(this.selectors.formUploadingPDF)
@@ -30,7 +30,7 @@ class AdminPanel {
     logOut() {
         this.buttonLogOut.addEventListener('click', (e) => {
             localStorage.removeItem('isAdmin')
-            window.location.href = '/adminLogin.html'
+            window.location.href = '/PDFCloud-frontend/build/adminLogin.html'
         })
     }
 

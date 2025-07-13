@@ -7,7 +7,7 @@ class User {
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
         if (!this.rootElement) return
-        if (localStorage.getItem('isUser') !== 'true') window.location.href = '/index.html'
+        if (localStorage.getItem('isUser') !== 'true') window.location.href = '/PDFCloud-frontend/build/index.html'
         this.buttonLogOut = document.querySelector(this.selectors.logOut)
         this.logOut()
         this.displayPDF()
@@ -17,7 +17,7 @@ class User {
         this.buttonLogOut.addEventListener('click', (e) => {
             console.log(this.buttonLogOut)
             localStorage.removeItem('isUser')
-            window.location.href = '/index.html'
+            window.location.href = '/PDFCloud-frontend/build/index.html'
         })
     }
 

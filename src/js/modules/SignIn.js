@@ -48,7 +48,7 @@ class SignIn {
             if (data.success) {
                 alert('Вход выполнен успешно!')
                 localStorage.setItem('isUser', 'true')
-                window.location.href = '/dashboard.html'
+                window.location.href = '/PDFCloud-frontend/build/dashboard.html'
 
                 // this.coutingTime(data)
             } else {
