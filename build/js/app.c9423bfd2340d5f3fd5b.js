@@ -1297,7 +1297,7 @@ class AdminPanel {
             const formData = new FormData()
             formData.append('pdf', file)
 
-            fetch('http://localhost:3000/api/upload-pdf', {
+            fetch('https://pdfcloud-server.onrender.com/api/upload-pdf', {
                 method: 'POST',
                 body: formData
             })
@@ -1316,7 +1316,7 @@ class AdminPanel {
             const addUserName = this.formAddUser.querySelector('[data-js-add-user-login]')
             const addUserPassword = this.formAddUser.querySelector('[data-js-add-user-password]')
 
-            fetch('http://localhost:3000/api/admin/add-user', {
+            fetch('https://pdfcloud-server.onrender.com/api/admin/add-user', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -1338,7 +1338,7 @@ class AdminPanel {
 
             const inputDeleteUser = this.formDeleteUser.querySelector('[data-js-input-delete-user]')
 
-            fetch(`http://localhost:3000/api/admin/delete-user/${encodeURIComponent(inputDeleteUser.value)}`, {
+            fetch(`https://pdfcloud-server.onrender.com/api/admin/delete-user/${encodeURIComponent(inputDeleteUser.value)}`, {
                 method: 'DELETE',
             })
                 .then(response => response.json())
@@ -1360,7 +1360,7 @@ class AdminPanel {
             const inputEditUserName = this.formEditUser.querySelector('[data-js-edit-user-login]')
             const inputEditPassword = this.formEditUser.querySelector('[data-js-edit-user-password]')
 
-            fetch(`http://localhost:3000/api/admin/update-user/${encodeURIComponent(inputEditUserNameOld.value)}`, {
+            fetch(`https://pdfcloud-server.onrender.com/api/admin/update-user/${encodeURIComponent(inputEditUserNameOld.value)}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ newUsername: inputEditUserName.value || undefined, newPassword: inputEditPassword.value || undefined })
@@ -1921,12 +1921,12 @@ class User {
         documents.forEach((document) => {
             const articlePdfHTML = `
                     <article class="files__article">
-                        <a href="http://localhost:3000/api/pdf/${document.DocumentId}" class="files__box">
+                        <a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="files__box">
                             <img class="files__image" src="img/logo/pdf-logo.svg" alt="pdf document" width="120" height="120">
                         </a>
-                        <h2><a href="http://localhost:3000/api/pdf/${document.DocumentId}" class="files__article-title" target="_blank">${document.FileName}</a></h2>
-                        <a href="http://localhost:3000/api/pdf/${document.DocumentId}" class="button button_red" target="_blank">View Document</a>
-                        <a href="http://localhost:3000/api/pdf/${document.DocumentId}/download" class="button button_red" target="_blank">Download</a>
+                        <h2><a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="files__article-title" target="_blank">${document.FileName}</a></h2>
+                        <a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="button button_red" target="_blank">View Document</a>
+                        <a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}/download" class="button button_red" target="_blank">Download</a>
                     </article>`
 
             containerPDF.insertAdjacentHTML('beforeend', articlePdfHTML)
@@ -2221,4 +2221,4 @@ new _modules_Spoller_js__WEBPACK_IMPORTED_MODULE_9__["default"]()
 
 /******/ })()
 ;
-//# sourceMappingURL=app.953d9bca63ff8746135f.js.map
+//# sourceMappingURL=app.c9423bfd2340d5f3fd5b.js.map

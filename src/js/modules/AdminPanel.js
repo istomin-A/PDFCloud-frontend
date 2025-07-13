@@ -44,7 +44,7 @@ class AdminPanel {
             const formData = new FormData()
             formData.append('pdf', file)
 
-            fetch('http://localhost:3000/api/upload-pdf', {
+            fetch('https://pdfcloud-server.onrender.com/api/upload-pdf', {
                 method: 'POST',
                 body: formData
             })
@@ -63,7 +63,7 @@ class AdminPanel {
             const addUserName = this.formAddUser.querySelector('[data-js-add-user-login]')
             const addUserPassword = this.formAddUser.querySelector('[data-js-add-user-password]')
 
-            fetch('http://localhost:3000/api/admin/add-user', {
+            fetch('https://pdfcloud-server.onrender.com/api/admin/add-user', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -85,7 +85,7 @@ class AdminPanel {
 
             const inputDeleteUser = this.formDeleteUser.querySelector('[data-js-input-delete-user]')
 
-            fetch(`http://localhost:3000/api/admin/delete-user/${encodeURIComponent(inputDeleteUser.value)}`, {
+            fetch(`https://pdfcloud-server.onrender.com/api/admin/delete-user/${encodeURIComponent(inputDeleteUser.value)}`, {
                 method: 'DELETE',
             })
                 .then(response => response.json())
@@ -107,7 +107,7 @@ class AdminPanel {
             const inputEditUserName = this.formEditUser.querySelector('[data-js-edit-user-login]')
             const inputEditPassword = this.formEditUser.querySelector('[data-js-edit-user-password]')
 
-            fetch(`http://localhost:3000/api/admin/update-user/${encodeURIComponent(inputEditUserNameOld.value)}`, {
+            fetch(`https://pdfcloud-server.onrender.com/api/admin/update-user/${encodeURIComponent(inputEditUserNameOld.value)}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ newUsername: inputEditUserName.value || undefined, newPassword: inputEditPassword.value || undefined })

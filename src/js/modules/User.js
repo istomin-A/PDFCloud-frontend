@@ -27,12 +27,12 @@ class User {
         documents.forEach((document) => {
             const articlePdfHTML = `
                     <article class="files__article">
-                        <a href="http://localhost:3000/api/pdf/${document.DocumentId}" class="files__box">
+                        <a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="files__box">
                             <img class="files__image" src="img/logo/pdf-logo.svg" alt="pdf document" width="120" height="120">
                         </a>
-                        <h2><a href="http://localhost:3000/api/pdf/${document.DocumentId}" class="files__article-title" target="_blank">${document.FileName}</a></h2>
-                        <a href="http://localhost:3000/api/pdf/${document.DocumentId}" class="button button_red" target="_blank">View Document</a>
-                        <a href="http://localhost:3000/api/pdf/${document.DocumentId}/download" class="button button_red" target="_blank">Download</a>
+                        <h2><a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="files__article-title" target="_blank">${document.FileName}</a></h2>
+                        <a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="button button_red" target="_blank">View Document</a>
+                        <a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}/download" class="button button_red" target="_blank">Download</a>
                     </article>`
 
             containerPDF.insertAdjacentHTML('beforeend', articlePdfHTML)
