@@ -1209,7 +1209,7 @@ class AdminLogin {
             if (data.success) {
                 alert('Вход выполнен успешно!')
                 localStorage.setItem('isAdmin', 'true')
-                window.location.href = '/admin.html'
+                window.location.href = '/PDFCloud-frontend/build/admin.html'
             } else {
                 alert('Ошибка: ' + data.message)
             }
@@ -1265,7 +1265,7 @@ class AdminPanel {
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
         if (!this.rootElement) return
-        if (localStorage.getItem('isAdmin') !== 'true') window.location.href = '/adminLogin.html'
+        if (localStorage.getItem('isAdmin') !== 'true') window.location.href = '/PDFCloud-frontend/build/adminLogin.html'
         this.buttonLogOut = document.querySelector(this.selectors.logOut)
         this.logOut()
         this.formUploadingPDF = this.rootElement.querySelector(this.selectors.formUploadingPDF)
@@ -1283,7 +1283,7 @@ class AdminPanel {
     logOut() {
         this.buttonLogOut.addEventListener('click', (e) => {
             localStorage.removeItem('isAdmin')
-            window.location.href = '/adminLogin.html'
+            window.location.href = '/PDFCloud-frontend/build/adminLogin.html'
         })
     }
 
@@ -1649,7 +1649,7 @@ class SignIn {
             if (data.success) {
                 alert('Вход выполнен успешно!')
                 localStorage.setItem('isUser', 'true')
-                window.location.href = '/dashboard.html'
+                window.location.href = '/PDFCloud-frontend/build/dashboard.html'
 
                 // this.coutingTime(data)
             } else {
@@ -1901,7 +1901,7 @@ class User {
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
         if (!this.rootElement) return
-        if (localStorage.getItem('isUser') !== 'true') window.location.href = '/index.html'
+        if (localStorage.getItem('isUser') !== 'true') window.location.href = '/PDFCloud-frontend/build/index.html'
         this.buttonLogOut = document.querySelector(this.selectors.logOut)
         this.logOut()
         this.displayPDF()
@@ -1911,7 +1911,7 @@ class User {
         this.buttonLogOut.addEventListener('click', (e) => {
             console.log(this.buttonLogOut)
             localStorage.removeItem('isUser')
-            window.location.href = '/index.html'
+            window.location.href = '/PDFCloud-frontend/build/index.html'
         })
     }
 
@@ -2221,4 +2221,4 @@ new _modules_Spoller_js__WEBPACK_IMPORTED_MODULE_9__["default"]()
 
 /******/ })()
 ;
-//# sourceMappingURL=app.90e91c7cc530a1766861.js.map
+//# sourceMappingURL=app.953d9bca63ff8746135f.js.map
