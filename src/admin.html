@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__body _container">
+            <a href="index.html" class="logo">
+                <img class="logo__image" src="img/logo/pdf-logo.svg" alt="logo" width="30" height="30">
+                <span class="logo__text _mobile-hidden">PDFCloud</span>
+            </a>
+            <button type="button" class="button button_red" data-js-admin-log-out>Log Out</button>
+        </div>
+    </header>
+    <main class="admin-panel" data-js-admin-panel>
+        <h1 class="admin-panel__title _container">Welocme to admin panel</h1>
+        <div class="admin-panel__body _container">
+            <div class="admin-panel__inner">
+                <h2>Search</h2>
+                <div class="admin-panel__box" data-js-admin-search>
+                    <form action="#" class="form spoller__inner">
+                        <input type="text" class="form__input" required placeholder="Search for username" minlength="1"
+                            maxlength="50" id="form[admin-search]" name="admin-search" data-js-input-search>
+                        <button type="submit" class="button button_start">Search</button>
+                    </form>
+
+                    <div class="admin-panel__search-out" data-js-admin-search-out></div>
+                </div>
+            </div>
+            <div class="admin-panel__inner">
+                <h2>Uploading a document</h2>
+                <details class="spoller" data-js-spoller>
+                    <summary class="spoller__button" data-js-spoller-button>
+                        <span class="spoller__button-text">Uploading a document</span>
+                        <span data-js-spoller-icon class="spoller__icon"></span>
+                    </summary>
+                    <div class="spoller__body" data-js-spoller-body>
+                        <form action="#" class="form spoller__inner" data-js-uploading-pdf>
+                            <input type="file" id="form[uploading-file]" name="uploading-file">
+                            <button type="submit" class="button button_start">Send</button>
+                        </form>
+                    </div>
+                </details>
+            </div>
+            <div class="admin-panel__inner">
+                <h2>Add User</h2>
+                <details class="spoller" data-js-spoller>
+                    <summary class="spoller__button" data-js-spoller-button>
+                        <span class="spoller__button-text">Add User</span>
+                        <span data-js-spoller-icon class="spoller__icon"></span>
+                    </summary>
+                    <div class="spoller__body" data-js-spoller-body>
+                        <form action="#" class="form spoller__inner" data-js-add-user>
+                            <input type="text" class="form__input" required placeholder="Enter your username"
+                                minlength="3" maxlength="50" id="form[add-user-username]" name="add-user-username"
+                                data-js-add-user-login>
+                            <input type="text" class="form__input" required placeholder="Enter your password"
+                                minlength="3" maxlength="50" id="form[add-user-password]" name="add-user-password"
+                                data-js-add-user-password>
+                            <button type="submit" class="button button_start">Add User</button>
+                        </form>
+                    </div>
+                </details>
+            </div>
+            <div class="admin-panel__inner">
+                <h2>Delete User</h2>
+                <details class="spoller" data-js-spoller>
+                    <summary class="spoller__button" data-js-spoller-button>
+                        <span class="spoller__button-text">Delete User</span>
+                        <span data-js-spoller-icon class="spoller__icon"></span>
+                    </summary>
+                    <div class="spoller__body" data-js-spoller-body>
+                        <form action="#" class="form spoller__inner" data-js-delete-user>
+                            <input type="text" class="form__input" required placeholder="Enter your username"
+                                minlength="1" maxlength="50" id="form[delete-user-username]" name="delete-user-username"
+                                data-js-input-delete-user>
+                            <button type="submit" class="button button_start">Delete User</button>
+                        </form>
+                    </div>
+                </details>
+            </div>
+            <div class="admin-panel__inner">
+                <h2>Edit User</h2>
+                <details class="spoller" data-js-spoller>
+                    <summary class="spoller__button" data-js-spoller-button>
+                        <span class="spoller__button-text">Edit User</span>
+                        <span data-js-spoller-icon class="spoller__icon"></span>
+                    </summary>
+                    <div class="spoller__body" data-js-spoller-body>
+                        <form action="#" class="form spoller__inner" data-js-edit-user>
+                            <input type="text" class="form__input" required placeholder="Enter old username"
+                                minlength="1" maxlength="50" id="form[edit-user-old]" name="edit-user-old"
+                                data-js-edit-user-old>
+                            <input type="text" class="form__input" placeholder="Enter new username" minlength="1"
+                                maxlength="50" id="form[edit-user-username]" name="edit-user-username"
+                                data-js-edit-user-login>
+                            <input type="text" class="form__input" placeholder="Enter new password" minlength="1"
+                                maxlength="50" id="form[edit-user-password]" name="edit-user-password"
+                                data-js-edit-user-password>
+                            <button type="submit" class="button button_start">Edit User</button>
+                        </form>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

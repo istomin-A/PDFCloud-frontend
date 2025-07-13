@@ -1,0 +1,65 @@
+@use '../tools' as *;
+
+.spoller {
+
+    &__button {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        border: rem(2) solid var(--color-grey-70);
+        border-radius: rem(10);
+        padding: rem(10) rem(15);
+        transition: border 0.3s ease 0s;
+
+        &._active {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    &__button-text {}
+
+    &__icon {
+        @include square(rem(20));
+        position: relative;
+
+        &::before,
+        &::after {
+            @include abs-center;
+
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: rem(2);
+            background: var(--color-grey-20);
+        }
+
+        &::after {
+            rotate: 90deg;
+            transition: rotate 0.3s ease 0s;
+        }
+
+        &._active {
+            &::after {
+                rotate: 0deg;
+            }
+        }
+
+    }
+
+    &__body {
+
+        &._active .spoller__inner {
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+            border-top: 0;
+        }
+    }
+
+    &__inner {
+        padding: rem(10) rem(15);
+        border: rem(2) solid var(--color-grey-70);
+        border-radius: rem(10);
+        transition: border 0.3s ease 0s;
+    }
+}

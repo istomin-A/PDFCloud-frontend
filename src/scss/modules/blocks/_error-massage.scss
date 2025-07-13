@@ -1,0 +1,13 @@
+@use '../tools' as *;
+
+.error-massage {
+    display: none;
+    color: red;
+    font-size: fluid(16, 14);
+    text-transform: uppercase;
+    padding: rem(5) rem(5);
+
+    &._active {
+        display: block;
+    }
+}

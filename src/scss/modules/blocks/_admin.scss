@@ -1,0 +1,9 @@
+@use '../tools' as *;
+
+.admin {
+    @include flex-center;
+
+    height: 100vh;
+
+    &__body {}
+}

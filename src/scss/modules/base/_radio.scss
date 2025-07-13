@@ -1,0 +1,41 @@
+@use '../tools' as *;
+
+// * Базовые стили для radio-buttons
+._radio-real {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked+._radio-custom::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &:focus+._radio-custom {
+        box-shadow: 0px 0px 0px rem(1) #000, 0px 0px rem(10) #000;
+    }
+}
+
+._radio-custom {
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    background-color: #A3BEF8;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: rem(32);
+        height: rem(32);
+        border: rem(2) solid #0E1422;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.5s ease 0s;
+    }
+}

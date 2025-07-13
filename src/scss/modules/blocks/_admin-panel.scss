@@ -1,0 +1,42 @@
+@use '../tools' as *;
+
+.admin-panel {
+    padding-block: fluid(50, 20);
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+    }
+
+    &__title {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin: rem(0) auto fluid(50, 20) auto;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15);
+    }
+
+    &__search-out {
+        display: none;
+        padding: rem(10) rem(15);
+        border: rem(2) solid var(--color-grey-70);
+        border-radius: rem(10);
+
+        &._active {
+            display: block;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15);
+    }
+}

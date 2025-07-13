@@ -1,0 +1,13 @@
+@use '../tools' as *;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: rem(7);
+
+    &__text {
+        font-size: fluid(30, 20);
+        font-weight: 700;
+        color: var(--color-black);
+    }
+}

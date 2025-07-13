@@ -1,0 +1,49 @@
+@use '../tools' as *;
+
+.burger {
+    @include square(rem(34));
+
+    display: none;
+    padding: rem(8) rem(4);
+    position: relative;
+    z-index: 35;
+    background-color: transparent;
+
+    &::before {
+        @include abs-center;
+        @include square(rem(44));
+
+        content: '';
+    }
+
+    @include mobile {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &._active {
+        .burger__line {
+            &:first-child {
+                rotate: 45deg;
+                transform-origin: 0;
+                translate: 0.25em -0.1em;
+            }
+
+            &:nth-child(2) {
+                rotate: -45deg;
+            }
+
+            &:last-child {
+                width: 0;
+            }
+        }
+    }
+
+    &__line {
+        width: 100%;
+        height: rem(2);
+        background-color: var(--color-grey-20);
+        transition-duration: .3s;
+    }
+}

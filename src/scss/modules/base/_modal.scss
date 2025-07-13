@@ -1,0 +1,58 @@
+@use '../tools' as *;
+
+// * Базовые стили для modal
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .7);
+    transition: opacity .5s ease 0s, visibility .5s ease 0s, box-shadow .5s ease 0s;
+    border-radius: rem(10);
+
+    &__content {
+        max-width: rem(600);
+        width: 100%;
+        padding: rem(50) fluid(20, 10);
+        background: var(--color-white-accent);
+    }
+
+    &__close {
+        position: absolute;
+        top: rem(7);
+        right: rem(15);
+        background: transparent;
+        font-size: rem(20);
+        padding: rem(10);
+        font-weight: 600;
+        transition: rotate 0.3s ease 0s;
+
+        @include hover {
+            rotate: 360deg;
+        }
+    }
+
+    &__title {
+        font-size: fluid(30, 20);
+        text-align: center;
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+            margin: rem(0) rem(0) fluid(30, 15) rem(0);
+        }
+    }
+}
+
+.modal[open] {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal::backdrop {
+    background-color: #00000000;
+}

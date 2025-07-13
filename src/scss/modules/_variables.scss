@@ -1,0 +1,31 @@
+@use 'tools' as *;
+
+:root {
+    --font-family: 'Montserrat', sans-serif;
+
+    // color white
+    --color-white: #ffffff;
+    --color-white-accent: #fefefe;
+    --color-white-95: #F1F1F3;
+    --color-white-99: #FCFCFD;
+
+    // color black
+    --color-black: #101010;
+
+    // color grey
+    --color-grey-10: #1A1A1A;
+    --color-grey-15: #262626;
+    --color-grey-20: #333333;
+    --color-grey-30: #4C4C4D;
+    --color-grey-40: #656567;
+    --color-grey-60: #98989A;
+    --color-grey-70: #B3B3B3;
+
+    // color orange
+    --color-orange: #F57520;
+    --color-orange-accent: #EB6B16;
+
+    // options container
+    --container: #{rem(1400)};
+    --container-padding-x: #{rem(15)};
+}

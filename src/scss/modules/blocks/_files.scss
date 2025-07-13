@@ -1,0 +1,54 @@
+@use '../tools' as *;
+
+.files {
+    padding-block: fluid(50, 20);
+
+    &__body {}
+
+    &__image {
+        width: fluid(120, 80);
+    }
+
+    &__title {
+        color: var(--color-grey-10);
+        text-transform: uppercase;
+        font-size: fluid(32, 20);
+
+        &:not(:last-child) {
+            margin: rem(0) rem(0) fluid(40, 20) rem(0);
+        }
+    }
+
+    &__out {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: fluid(20, 10);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+        background: var(--color-white-95);
+        border-radius: rem(10);
+    }
+
+    &__article-title {
+        display: flex;
+        justify-content: center;
+        font-size: fluid(20, 18);
+        color: var(--color-grey-10);
+        transition: opacity 0.3s ease 0s;
+        text-transform: uppercase;
+
+        @include hover {
+            opacity: .8;
+        }
+    }
+
+    &__link {}
+}

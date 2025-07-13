@@ -1,0 +1,23 @@
+@use '../tools' as *;
+
+.faq {
+    padding-block: fluid(50, 20);
+
+    &__title {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin: rem(0) auto fluid(30, 20) auto;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(20);
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+}

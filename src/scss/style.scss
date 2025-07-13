@@ -1,0 +1,39 @@
+// * Базовые стили
+@use 'modules/reset';
+@use 'modules/variables';
+@use 'modules/fonts';
+@use 'modules/options';
+
+// =======================================================================================================
+// * Подключение базовых стилей
+@use 'modules/base/modal';
+// @use 'modules/base/checkbox';
+// @use 'modules/base/radio';
+// @use 'modules/base/select';
+
+// * Подключение БЕМ блоков
+@use 'modules/blocks/admin';
+@use 'modules/blocks/admin-panel';
+
+@use 'modules/blocks/button';
+
+@use 'modules/blocks/spoller';
+
+@use 'modules/blocks/error-massage';
+
+@use 'modules/blocks/menu';
+
+@use 'modules/blocks/logo';
+
+@use 'modules/blocks/form';
+
+@use 'modules/blocks/burger';
+@use 'modules/blocks/header';
+
+@use 'modules/blocks/intro';
+
+@use 'modules/blocks/faq';
+
+@use 'modules/blocks/files';
+
+@use 'modules/blocks/footer';

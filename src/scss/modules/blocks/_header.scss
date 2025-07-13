@@ -1,0 +1,29 @@
+// * import index file
+@use '../tools' as *;
+// =======================================================================================================
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-white-accent);
+    box-shadow: rem(-2) rem(5) rem(10) rem(0) rgba(0, 0, 0, 0.75);
+
+    &__body {
+        min-height: rem(70);
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        justify-content: space-between;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: rem(15);
+
+        @include mobile {
+            z-index: 40;
+        }
+    }
+}
