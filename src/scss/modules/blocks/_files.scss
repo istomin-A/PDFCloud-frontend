@@ -5,6 +5,11 @@
 
     &__body {}
 
+    &__box {
+        display: flex;
+        justify-content: center;
+    }
+
     &__image {
         width: fluid(120, 80);
     }
