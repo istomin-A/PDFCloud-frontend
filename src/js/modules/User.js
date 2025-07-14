@@ -1,3 +1,5 @@
+import imagePdf from '../../img/logo/pdf-logo.svg'
+
 class User {
     selectors = {
         root: '[data-js-user]',
@@ -28,7 +30,7 @@ class User {
             const articlePdfHTML = `
                     <article class="files__article">
                         <a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="files__box">
-                            <img class="files__image" src="img/logo/pdf-logo.svg" alt="pdf document" width="120" height="120">
+                            <img class="files__image" src="${imagePdf}" alt="pdf document" width="120" height="120">
                         </a>
                         <h2><a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="files__article-title" target="_blank">${document.FileName}</a></h2>
                         <a href="https://pdfcloud-server.onrender.com/api/pdf/${document.DocumentId}" class="button button_red" target="_blank">View Document</a>
